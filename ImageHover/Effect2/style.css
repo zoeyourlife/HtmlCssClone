@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #262626;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  /* 요소들 밑에 그림자 효과 추가하는 webkit */
+  -webkit-box-reflect: below 1px
+    linear-gradient(transparent, transparent, #0004);
+}
+
+.container .box {
+  display: flex;
+  position: relative;
+  width: 320px;
+  height: 400px;
+  margin: 0 20px;
+  border-radius: 20px;
+  background: linear-gradient(
+    45deg,
+    #2da2ff 25%,
+    #444 25%,
+    #444 50%,
+    #2da2ff 50%,
+    #2da2ff 75%,
+    #444 75%,
+    #444 100%
+  );
+  background-size: 40px 40px;
+  /* gray filter 1주고 애니메이션 적용 */
+  filter: grayscale(1);
+  animation: animateBg 0.5s linear infinite;
+  /* 잠깐 animation의 상태를 멈춰줌 */
+  animation-play-state: paused;
+  transition: filter 1s;
+  justify-content: center;
+}
+
+.container .box:nth-child(2) {
+  background: linear-gradient(
+    135deg,
+    #ff61ae 25%,
+    #444 25%,
+    #444 50%,
+    #ff61ae 50%,
+    #ff61ae 75%,
+    #444 75%,
+    #444 100%
+  );
+  background-size: 40px 40px;
+}
+
+.container .box:hover {
+  /* 마우스 hover시 정지된 애니메이션 상태 작동시키기 + 회색필터 제거 */
+  animation-play-state: running;
+  filter: grayscale(0);
+}
+
+@keyframes animateBg {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 40px;
+  }
+}
+
+.container .box img {
+  position: absolute;
+  bottom: 0;
+  height: 90%;
+  transition: height 0.5s;
+}
+
+.container .box:hover img {
+  height: 480px;
+}
