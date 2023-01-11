@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- 
+ScrollTrigger cdn 사용 
+gsap.from method를 script 태그 안에 작성해서 각각의 요소들의 스크롤시 이벤트 효과를 줄 수 있음.
+-->
+
+<body>
+    <header id="header">
+        <a href="#" class="logo">logo</a>
+        <ul class="navigation">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <h2 id="txt">Hello Winter</h2>
+        <img src="monutain_01.png" id="m1">
+        <img src="monutain_02.png" id="m2">
+        <img src="monutain_03.png" id="m3">
+        <img src="monutain_04.png" id="m4">
+        <img src="trees.png" id="tr">
+        <img src="cable_cars.png" id="crs">
+        <img src="house.png" id="house">
+    </section>
+    <div class="sec">
+        <h2>Parallx Scrolling Web</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda officia reprehenderit dolore reiciendis
+            aut fugiat, iusto quasi illum placeat, porro eaque quibusdam culpa. Deserunt magni autem illum doloribus
+            ipsa dolorum nulla rerum voluptatibus voluptates ea aut, maiores vel eius explicabo excepturi hic natus
+            facere consequatur repudiandae illo fuga nesciunt labore laborum error. Consectetur molestias corporis
+            voluptatum doloremque, fuga, aliquid modi libero unde at quae odio pariatur. Distinctio molestias dolorum
+            sunt quisquam nihil at explicabo praesentium voluptatibus laborum! Nemo voluptate consequuntur praesentium
+            ipsa cumque. Iste voluptatibus ea animi omnis similique. Laudantium repudiandae, eius cumque earum tempore
+            fugiat aut accusamus quam quas quaerat alias eveniet, blanditiis architecto. Modi, asperiores quidem
+            repudiandae ipsa tempore itaque voluptas officiis deleniti ut expedita nam corrupti, repellat laborum
+            accusantium, quos incidunt recusandae? Enim ea, magnam distinctio quis autem reiciendis? Laboriosam
+            voluptate necessitatibus ea quisquam sunt quod unde itaque exercitationem possimus quis, dolorum sed
+            inventore et similique nihil ex reiciendis numquam eveniet iusto. Commodi doloremque eum quod sunt cumque
+            voluptatum eaque aspernatur? Reprehenderit exercitationem magni natus incidunt voluptates tenetur
+            consectetur placeat! Doloribus nostrum eum, itaque quo obcaecati tempore tempora magnam natus. Molestias
+            pariatur consequatur numquam, temporibus, odit nesciunt beatae quo nostrum fugiat et ea culpa, ducimus
+            repellendus sit eum magni quibusdam voluptatum accusantium! Aperiam, possimus provident delectus labore
+            expedita tempore nihil soluta ullam excepturi consequatur obcaecati nostrum quod amet libero dignissimos.
+            Minima, harum doloremque possimus non dicta placeat delectus repellat culpa maxime iste hic consectetur,
+            nostrum laudantium aperiam. Illo dolorum incidunt iste, ratione excepturi id! Veritatis, eius in.
+            <br><br>Lorem
+            ipsum, dolor sit amet consectetur adipisicing elit. Enim sed repudiandae consequuntur atque ullam corporis.
+            Minima minus excepturi ad explicabo fuga unde enim accusantium, consectetur atque, amet expedita officiis
+            est deserunt necessitatibus autem mollitia vitae voluptas a tempore soluta beatae. Ipsa error, dolorum iste
+            ad animi totam! Sapiente dignissimos, incidunt temporibus tenetur commodi at sunt id quos deleniti nihil?
+            Nihil dolorem debitis veritatis eveniet tenetur hic officiis ducimus magnam facilis laborum sunt aperiam
+            consequatur exercitationem impedit quibusdam dolorum facere quis inventore ut corrupti quasi, explicabo
+            velit odit? Quasi, adipisci tenetur? Aspernatur culpa blanditiis, praesentium repellat numquam quibusdam
+            aperiam doloremque magni ab aliquam rerum, quod hic doloribus maxime deleniti. Laudantium necessitatibus
+            nisi nesciunt autem, id beatae et fugit ex maiores voluptas explicabo perspiciatis. Est similique, ut
+            corrupti incidunt cumque maiores a excepturi, odit ullam recusandae distinctio amet vel cum blanditiis
+            dolorum quam odio eius atque. Aperiam iste omnis quia quasi, nam quibusdam! Nesciunt possimus odio illo
+            quisquam natus earum ratione esse quasi tempora exercitationem rem porro eum culpa eos minus debitis nam
+            quis inventore, placeat voluptates mollitia itaque dolor soluta odit. Laborum distinctio sed dignissimos
+            iste a odio aliquid et vel inventore nobis quidem animi minus facilis, dolorem repellendus perferendis
+            praesentium, ducimus eaque obcaecati, nisi esse repudiandae corrupti ullam ratione. Provident explicabo quos
+            dolorem in, ab nostrum sapiente neque. Modi natus nam tempore quos iusto dolorum rerum vel illum iure? Ex
+            pariatur fugiat temporibus odio unde inventore nam est enim esse in labore quisquam similique, commodi
+            laboriosam magnam amet quia eligendi!<br>
+        </p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script>gsap.from("#txt", {
+            scrollTrigger: {
+                scrub: true
+            },
+            x: 350,
+        })
+        gsap.from("#m1", {
+            scrollTrigger: {
+                scrub: true
+            },
+            y: 100,
+        })
+        gsap.from("#m2", {
+            scrollTrigger: {
+                scrub: true
+            },
+            y: 50,
+        })
+        gsap.from("#m3", {
+            scrollTrigger: {
+                scrub: true
+            },
+            y: 200,
+        })
+        gsap.from("#m4", {
+            scrollTrigger: {
+                scrub: true
+            },
+            y: 150,
+        })
+        gsap.from("#tr", {
+            scrollTrigger: {
+                scrub: true
+            },
+            y: 150,
+        })
+        gsap.from("#crs", {
+            scrollTrigger: {
+                scrub: true
+            },
+            x: 100,
+        })
+        gsap.from("#house", {
+            scrollTrigger: {
+                scrub: true
+            },
+            y: 100,
+        })</script>
+
+</body>
+
+</html>
