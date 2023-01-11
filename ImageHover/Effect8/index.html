@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <span></span>
+            <div class="imgBx"><img src="piki1.png"></div>
+            <div class="content">
+                <div>
+                    <h2>Card Title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur nisi ea corrupti minus, sint
+                        necessitatibus hic molestiae ad inventore. Sed a nihil odio sunt officiis maiores, cumque veniam
+                        fuga illum.</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <span></span>
+            <div class="imgBx"><img src="spy.jpg"></div>
+            <div class="content">
+                <div>
+                    <h2>Card Title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur nisi ea corrupti minus, sint
+                        necessitatibus hic molestiae ad inventore. Sed a nihil odio sunt officiis maiores, cumque veniam
+                        fuga illum.</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <span></span>
+            <div class="imgBx"><img src="piki1.png"></div>
+            <div class="content">
+                <div>
+                    <h2>Card Title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur nisi ea corrupti minus, sint
+                        necessitatibus hic molestiae ad inventore. Sed a nihil odio sunt officiis maiores, cumque veniam
+                        fuga illum.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+    <!--
+            jqeury cdn 사용
+            카드에 마우스 입력과 뗀 순간에 대한 이벤트
+            계산값 찾기위한 함수 작성
+        -->
+    <script>
+        $(document).ready(function () {
+            $('.card').on('mouseenter', function (e) {
+                x = e.pageX - $(this).offset().left,
+                    y = e.pageY - $(this).offset().top,
+                    $(this).find('span').css({ top: y, left: x })
+            })
+            $('.card').on('mouseout', function (e) {
+                x = e.pageX - $(this).offset().left,
+                    y = e.pageY - $(this).offset().top,
+                    $(this).find('span').css({ top: y, left: x })
+            })
+        })
+    </script>
+</body>
+
+</html>
