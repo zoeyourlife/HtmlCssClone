@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <ul class="week">
+        <li>Mon</li>
+        <li>Tue</li>
+        <li>Wed</li>
+        <li>Thu</li>
+        <li>Fri</li>
+        <li>Sat</li>
+        <li>Sun</li>
+
+    </ul>
+    <script>
+        let month = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
+            "October", "November", "December"]
+
+        let date = new Date();
+        let dayNum = date.getDay();
+
+        let day = date.getDate();
+        let months = months[date.getMonth()];
+        let year = date.getFullYear();
+
+        // 뭐지? 어째서 current 클래스 추가가 안되는 것일까? 뭘까. .  . .
+        let active = document.querySelector(".week li:nth-child(" + dayNum + ")");
+        active.classList.add('current');
+
+        let h1 = document.createElement('h1');
+        h1.innerHTML = day;
+        active.appendChild(h1);
+
+        let h5 = document.createElement('h5');
+        h5.innerHTML = month;
+        active.appendChild(h5);
+
+        let h3 = document.createElement('h3');
+        h3.innerHTML = year;
+        active.appendChild(h3);
+    </script>
+</body>
+
+</html>
