@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #111;
+}
+
+.container {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  background: #222;
+}
+
+.container .clip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.container .clip.clip1 {
+  background: url(chain5.jpg);
+  background-size: contain;
+  clip-path: polygon(0 0, 50% 0, 20% 100%, 0% 100%);
+}
+
+.container .clip.clip2 {
+  background: url(chain6.jpg);
+  background-size: contain;
+
+  clip-path: polygon(50% 0, 100% 0, 41% 100%, 18% 100%);
+}
+
+.container .clip.clip3 {
+  background: url(chain5.jpg);
+  background-size: contain;
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 36% 100%);
+}
+
+.container:hover .clip {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 89%);
+}
+
+.container .clip:hover {
+  clip-path: polygon(0 1%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+  padding: 20px;
+  background: #fff;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.container .clip:hover .content {
+  bottom: 0;
+  opacity: 1;
+}
