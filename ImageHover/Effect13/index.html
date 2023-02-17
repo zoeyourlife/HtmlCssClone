@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="imgBox">
+            <img src="aimyon.jpg">
+            <img src="aimyon1.jpg">
+        </div>
+        <div class="imgBox">
+            <img src="aimyon.jpg">
+            <img src="aimyon1.jpg">
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.149.0/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="hover.js"></script>
+    <script type="text/javascript">
+        Array.from(document.querySelectorAll('.imgBox')).forEach((e) => {
+            const imgs = Array.from(e.querySelectorAll('img'));
+            new hoverEffect({
+                parent: e,
+                intensity: 0.3,
+                image1: imgs[0].getAttribute('src'),
+                image2: imgs[1].getAttribute('src'),
+                displacementImage: '10.jpg'
+            });
+        })
+    </script>
+</body>
+
+</html>
