@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="동매.jpg" class="layer" data-speed="40">
+        <img src="동매.jpg" class="layer" data-speed="30">
+        <img src="동매.jpg" class="layer" data-speed="20">
+        <img src="동매.jpg" class="layer" data-speed="10">
+    </div>
+
+    <script type="text/javascript">
+        document.addEventListener('mousemove', parallax);
+        function parallax(e){
+            this.querySelectorAll('.layer').forEach(layer =>{
+                var speed = layer.getAttribute('data-speed')
+
+                var x = (window.innerHeight - e.pageX*speed)/250;
+                var y = (window.innerWidth - e.pageX*speed)/250;
+
+                layer.style.transform = `translate(${-x}px) translateY(${y}px)`
+            })
+        }
+    </script>
+</body>
+</html>
