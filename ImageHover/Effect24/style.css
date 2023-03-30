@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(scene2.jpg);
+  background-size: contain;
+  filter: blur(10px);
+  transition: 2s;
+}
+
+.logo {
+  position: relative;
+  z-index: 1;
+  max-width: 200px;
+  transition: 2s;
+}
+
+.logo:hover {
+  filter: blur(10px);
+  transform: scale(2);
+}
+
+.logo:hover ~ .bg {
+  filter: blur(0);
+  transform: scale(1.4);
+}
