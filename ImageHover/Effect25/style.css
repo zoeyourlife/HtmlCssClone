@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  position: relative;
+  width: 564px;
+  height: 798px;
+  background: #000;
+  overflow: hidden;
+}
+
+.box .image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+
+.box .image span {
+  width: 25%;
+  height: 100%;
+  background: url(karina1.jpg);
+  transition: 0.5s;
+}
+
+.box:hover .image span {
+  transform: translateY(-100%);
+}
+
+.box .image span:nth-child(1) {
+  background-position: 0;
+  transition-delay: 0s;
+}
+.box .image span:nth-child(2) {
+  background-position: 33.33%;
+  transition-delay: 0.1s;
+}
+.box .image span:nth-child(3) {
+  background-position: 66.66%;
+  transition-delay: 0.2s;
+}
+.box .image span:nth-child(4) {
+  background-position: 100%;
+  transition-delay: 0.3s;
+}
+
+/* 그림안에 text 집어넣는 과정 */
+.box .content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 55px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: 0.5s;
+  transform: translateY(100%);
+}
+
+.box:hover .content {
+  transition-delay: 0.5s;
+  transform: translateY(0);
+}
+
+.box .content h2 {
+  color: rgb(240, 184, 80);
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+.box .content p {
+  color: rgb(240, 184, 80);
+  font-size: 16px;
+  text-transform: uppercase;
+}
