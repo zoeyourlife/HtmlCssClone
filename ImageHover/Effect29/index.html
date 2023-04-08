@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="diamonds.css" />
+  </head>
+  <body>
+    <div class="diamond-grid">
+      <div class="item"><img src="scene4.jpg"></div>
+      <div class="item"><img src="scene6.jpg"></div>
+      <div class="item"><img src="scene5.jpg"></div>
+      <div class="item"><img src="scene6.jpg"></div>
+      <div class="item"><img src="scene4.jpg"></div>
+      <div class="item"><img src="scene6.jpg"></div>
+      <div class="item"><img src="scene5.jpg"></div>
+      <div class="item"><img src="scene4.jpg"></div>
+      <div class="item"><img src="scene5.jpg"></div>
+      <div class="item"><img src="scene6.jpg"></div>
+      <div class="item"><img src="scene4.jpg"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script src="jquery.diamonds.js"></script>
+    <script type="text/javascript">
+        $(".diamond-grid").diamonds({
+            size : 300, // Size of diamonds in pixels. Both width and height. 
+            gap : 5, // Pixels between each square.
+            hideIncompleteRow : false, // Hide last row if there are not enough items to fill it completely.
+            autoRedraw : true, // Auto redraw diamonds when it detects resizing.
+            itemSelector : ".item" // the css selector to use to select diamonds-items.
+        });
+        </script>
+  </body>
+</html>
