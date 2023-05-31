@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #262626;
+}
+
+section {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  display: block;
+  text-decoration: none;
+  height: 20vh;
+  line-height: 20vh;
+  text-align: center;
+  font-size: 5em;
+  box-sizing: border-box;
+  color: #fff;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+ul li a:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform: scale(0);
+  overflow: hidden;
+  text-align: center;
+  line-height: 100vh;
+  font-size: 3.2em;
+}
+
+ul li:nth-child(1) a:before {
+  background: #009688;
+}
+ul li:nth-child(2) a:before {
+  background: #d838d8;
+}
+ul li:nth-child(3) a:before {
+  background: #2ad62a;
+}
+ul li:nth-child(4) a:before {
+  background: #ef2727;
+}
+ul li:nth-child(5) a:before {
+  background: #d4eb70;
+}
+
+ul li:hover a:before {
+  transform: scale(1);
+  transition: transform 0.5s;
+}
